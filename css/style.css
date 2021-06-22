@@ -1,3 +1,9 @@
-body{
-    background: black;
+.hide{
+    display: none;
+}
+
+.car{
+    width: 50px;
+    height: 100px;
+    background: transparent url('././img/player.png') center / cover no-repeat;
 }
