@@ -18,7 +18,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -42,31 +41,75 @@ table {
 	border-spacing: 0;
 }
 
-.hide{
-    display: none;
-}
-.car, .enemy{
-    width: 50px;
-    height: 100px;
-    background: transparent url('../img/player.png') center / cover no-repeat;
-    position:absolute;
-    left: 125px;
-    bottom: 10px;
+html, body {
+    height: 100%;
 }
 
-.gameArea{
-    width: 300px;
-    height: 100%;
+.hide {
+    display: none;
+    
+}
+
+.gameStart {
+    margin: 50vh auto;
+    width: 400px;
+    height: 125px;
+    font-size: 100px;
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(4, 156, 37);
+    background: rgb(223, 5, 5);
+    padding: .8em 2em;
+    cursor: pointer;
+    z-index: 5;
+}
+.gameStart:hover { background: rgb(233, 9, 9); color: rgb(15, 235, 26); } 
+.gameStart:active { background: rgb(152, 0, 144); } 
+
+.car, .enemy {
+    width: 100px;
+    height: 200px;
+    background: transparent url(../img/player.png) center / cover no-repeat;
+    position: absolute;
+}
+
+.gameArea {
+    width: 600px;
     position: relative;
     margin: auto;
-    background:gray; 
+    background: #222;
     overflow: hidden;
 }
 
-.line{
+.line {
     position: absolute;
     width: 10px;
     height: 50px;
     background: #fff;
-    left: 145px;
+    left: 295px;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important; 
+    width: 1px !important; 
+    overflow: hidden;
+}
+
+.score {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    padding: .5rem 0;
+    z-index: 200;
+    font-size: 1.5rem;
+    color: skyblue;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 500;
 }
